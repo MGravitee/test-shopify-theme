@@ -1,0 +1,34 @@
+<h2>{{ section.settings.section_title | escape }}</h2>
+{{ section.settings.text }}
+
+{% schema %}
+{
+  "name": "Rich text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Testimonial Title",
+      "default": "Testimonial Title"
+    },
+    {
+      "type": "textarea",
+      "id": "customer_testimonial",
+      "label": "Testiomonial Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+      "type": "text",
+      "id": "customer_name",
+      "label": "Customer Name",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
